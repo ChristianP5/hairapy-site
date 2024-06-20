@@ -12,12 +12,14 @@ body{
     
 }
 
+
+
 /* NAVBAR STARTS HERE */
 
 .container{
     height: 100vh;
     background-color: #F5F5F5;
-    background-image: url('/img/cover-img.png');
+    background-image: url('/img/cover-img3.png');
     background-size: cover;
     background-position: center right; 
     background-repeat: no-repeat;
@@ -46,7 +48,7 @@ header{
     padding: 0 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #4C3E2B;
+    /* background-color: #826c4e; */
 }
 
 .navbar{
@@ -62,10 +64,6 @@ header{
 .navbar .links{
     display: flex;
     gap: 2rem;
-}
-
-.action_btn {
-    display: none;
 }
 
 
@@ -92,7 +90,6 @@ header{
     font-size: 0.8rem;
     font-weight: bold;
     cursor: pointer;
-    display: none;
 }
 
 .action_btn:hover{
@@ -145,7 +142,7 @@ header{
 
 
 .headline{
-    width: 1200px;
+    width: 100%;
     font-size: 2em;
     font-weight: bold;
     color: white;
@@ -162,6 +159,7 @@ header{
 .hairapy-about{
     background-color: #F1EDE4;
     display: flex;
+    
 }
 
 
@@ -174,10 +172,20 @@ header{
 }
 
 .about h1{
-    padding-top: 0.25rem;
+    padding-top: 2em;
 
 }
 
+.about p{
+    
+}
+
+.quote{
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: 'Montserrat'
+    
+}
 
 .splash img{
     width: 400px;
@@ -200,7 +208,7 @@ header{
 }
 
 .hairapy-team h1{
-    padding-top: 5rem;
+    padding: 5rem;
     font-weight:bolder;
     /* background-color: yellow; */
     
@@ -214,12 +222,14 @@ header{
 .cc-members, .ml-members, .md-members{
     justify-content: center;
     display: flex;
+    padding-bottom: 2em;
+
+    
     /* background-color: red; */
 }
 
 .cc-members img, .ml-members img, .md-members img{
     width: 200px;
-    padding: 1rem;
     border-radius: 30px;
     box-shadow: 10px;
 }
@@ -234,12 +244,16 @@ header{
 .steps{
     background-color: #F1EDE4;
     color: #4C3E2B;
-    padding: 6em;
+    padding-left: 6em;
     display: flex;
 }
 
 .steps h1{
-    padding: 1rem;
+    padding-top: 2em;
+}
+
+.steps h2{
+    padding-top: 1em;
 }
 
 .step img{
@@ -259,16 +273,66 @@ header{
 
 footer{
     padding: 0 2rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    background-color: #4C3E2B;
+    padding-top: 2rem;
+    background-color: #383020;
     color: white;
+    text-align: center;
 
+
+}
+
+.footer-logo img{
+    width: 200px;
+    height: 100px;
 }
 
 .footer a:hover{
     color: #DEDAD5;
 }
+
+.faq{
+    margin-top: -40px;
+}
+
+.copy{
+    font-size: 70%;
+}
+
+.socmed-logo img{
+    width: 35px;
+    padding: 5px;
+}
+
+.socmed-logo a img{
+    padding-top: 2em;
+}
+
+.footer a, .footer h1{
+    font-size: 1em;
+}
+
+.footer p{
+    padding-bottom: 2em;
+}
+
+.copy{
+    padding-top: 4em;
+}
+
+/* transitions */
+.splash, .about, .instructions, .members, .howto {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateY(20px);
+}
+
+.splash.fade-in, .about.fade-in, .instructions.fade-in, .members.fade-in, .howto.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
 
 
 /* RESPONSIVE STARTS HERE */
@@ -278,16 +342,12 @@ footer{
         display: none;
     }
     
+    .navbar .toggle_btn{
+        display: block;
+    }
 }
 
 
-.navbar .toggle_btn{
-    display: block;
-}
-
-
-
-/* responsive */
 @media (max-width: 576px) {
     .dropdown_menu{
         left: 2rem;
@@ -297,6 +357,7 @@ footer{
     .headline{
         margin: 0;
     }
+
     
 }
 
@@ -305,17 +366,18 @@ footer{
         background-size: cover;
         background-position: center right; 
     }
+
+    
 }
 @media (max-width: 768px) {
     .container {
         background-size: cover;
-        background-position: top right; 
+        background-position: center right; 
     }
 
     h1{
         font-size: 50px;
         line-height: 30px;
-        margin-top: -2em;
     }
 
     p{
@@ -326,6 +388,7 @@ footer{
         max-width:45%;
 
     }
+
 
     .cc-members img, .md-members img{
         max-width:70%;
@@ -343,13 +406,27 @@ footer{
 
     }
 
+    .hairapy-about h1{
+        padding: 0;
+    }
+
     .hairapy-about img{
-        max-width: 80%;
+        max-width: 55%;
         align-items: center;
     }
 
     .steps {
         flex-direction: column;
+        padding-left: 0;
+
+    }
+
+    .instructions-order{
+        padding-left: 2.5em;
+        padding-right: 2em;
+        text-align: left;
+
+
     }
 
     .steps img{
@@ -371,15 +448,28 @@ footer{
         order: 1; 
     }
 
-    .splash img {
-        width: 100%; /
+    .splash img{
+        margin: 0;
     }
 
-   
+    
+
     .step img.three-icon{
         height: 35px;
     }
-    
+
+    .instructions{
+        text-align: center;
+    }
+
+    .steps h2{
+        padding-bottom: 1em;
+    }
+
+    .headline h1{
+        padding-bottom: 10px;
+    }
+
 }
 
 @media (max-width: 700px) {
@@ -406,7 +496,7 @@ footer{
     }
 
     h1{
-        font-size: 27px;
+        font-size: 40px;
         line-height: 30px;
     }
 
