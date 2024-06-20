@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+
+}
+
+body{
+    background-color: #DEDAD5;
+    overflow-x: hidden;
+    
+}
+
+/* NAVBAR STARTS HERE */
+
+.container{
+    height: 100vh;
+    background-color: #F5F5F5;
+    background-image: url('/img/cover-img.png');
+    background-size: cover;
+    background-position: center right; 
+    background-repeat: no-repeat;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: #4C3E2B;
+}
+
+.highlight{
+    color: #4C3E2B
+}
+
+/* Header */
+header{
+    position: relative;
+    padding: 0 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #4C3E2B;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.action_btn {
+    display: none;
+}
+
+
+.toggle_btn{
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.navbar img{
+    width: 10em;
+    margin-top: 10px;
+    
+}
+
+.action_btn{
+    background-color: orange;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn:hover{
+    scale: 1.05;
+    color: white;
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
+
+
+/* drop-down menu */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown_menu{
+    display: block;
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+
+
+.headline{
+    width: 1200px;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    /* background-color: red; */
+    padding: 10rem 5rem;
+}
+
+/* NAVRBAR ENDS HERE */
+
+
+/* ABOUT HAIRAPY SECTION STARTS HERE */
+
+
+.hairapy-about{
+    background-color: #F1EDE4;
+    display: flex;
+}
+
+
+.about{
+    flex: 1;
+    /* background-color: green; */
+    margin: 2rem;
+    margin-left: 5rem;
+    color: #4C3E2B;
+}
+
+.about h1{
+    padding-top: 0.25rem;
+
+}
+
+
+.splash img{
+    width: 400px;
+    margin: 2rem;
+    /* background-color: yellow; */
+}
+
+/* ABOUT HAIRAPY SECTION ENDS HERE */
+
+/*  */
+/*  */
+/*  */
+/* HAIRAPY TEAM STARTS HERE */
+
+.hairapy-team{
+    background-color: #FFFFFF;
+    color: #4C3E2B;
+    text-align: center;
+    padding-bottom: 5em;
+}
+
+.hairapy-team h1{
+    padding-top: 5rem;
+    font-weight:bolder;
+    /* background-color: yellow; */
+    
+}
+
+.hairapy-team h2{
+    padding-top: 2rem;
+    /* background-color: aquamarine; */
+}
+
+.cc-members, .ml-members, .md-members{
+    justify-content: center;
+    display: flex;
+    /* background-color: red; */
+}
+
+.cc-members img, .ml-members img, .md-members img{
+    width: 200px;
+    padding: 1rem;
+    border-radius: 30px;
+    box-shadow: 10px;
+}
+
+/* HAIRAPY TEAM ENDS HERE */
+
+/*  */
+/*  */
+/*  */
+/* HAIRAPY TUTORIAL STARTS HERE */
+
+.steps{
+    background-color: #F1EDE4;
+    color: #4C3E2B;
+    padding: 6em;
+    display: flex;
+}
+
+.steps h1{
+    padding: 1rem;
+}
+
+.step img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.step h3{
+    display: flex;
+}
+
+.howto img{
+    width: 550px;
+}
+
+
+
+footer{
+    padding: 0 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #4C3E2B;
+    color: white;
+
+}
+
+.footer a:hover{
+    color: #DEDAD5;
+}
+
+
+/* RESPONSIVE STARTS HERE */
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+    
+}
+
+
+.navbar .toggle_btn{
+    display: block;
+}
+
+
+
+/* responsive */
+@media (max-width: 576px) {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+
+    .headline{
+        margin: 0;
+    }
+    
+}
+
+@media (max-width: 1200px) {
+    .container {
+        background-size: cover;
+        background-position: center right; 
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        background-size: cover;
+        background-position: top right; 
+    }
+
+    h1{
+        font-size: 50px;
+        line-height: 30px;
+        margin-top: -2em;
+    }
+
+    p{
+        font-size: 20px;
+    }
+
+    .cc-carlene, .cc-christian, .ml-audrey, .ml-raditha, .ml-rafi, .md-aqilah, .md-zulfirman{
+        max-width:45%;
+
+    }
+
+    .cc-members img, .md-members img{
+        max-width:70%;
+
+    }
+
+    .ml-members img{
+        max-width:100%;
+
+    }
+
+    .hairapy-about{
+        flex-direction: column;
+        text-align: justify;
+
+    }
+
+    .hairapy-about img{
+        max-width: 80%;
+        align-items: center;
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+
+    .steps img{
+        max-width: 100%;
+    }
+
+    .hairapy-about {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .about {
+        margin-left: 2.5em;
+        order: 2; 
+    }
+
+    .splash {
+        order: 1; 
+    }
+
+    .splash img {
+        width: 100%; /
+    }
+
+   
+    .step img.three-icon{
+        height: 35px;
+    }
+    
+}
+
+@media (max-width: 700px) {
+    .container {
+        background-size: cover;
+        background-position: top right; 
+    }
+    
+    h1{
+        font-size: 40px;
+        line-height: 15px;
+    }
+
+    p{
+        font-size: 20px;
+    }
+    
+}
+
+@media (max-width: 468px) {
+    .container {
+        background-size: cover;
+        background-position: top right;
+    }
+
+    h1{
+        font-size: 27px;
+        line-height: 30px;
+    }
+
+    p{
+        font-size: 12px;
+        
+    }
+    
+}
